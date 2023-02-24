@@ -1,0 +1,5 @@
+Twitter logo
+
+* Can't figure out the Twitter icon grid item. The hyperlink stretches across the entire header element,
+    only want it to be the size of the icon.
+* Twitter logo scales via @media, and gets too small when shrinking the page
