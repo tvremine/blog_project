@@ -1,0 +1,391 @@
+/* Global Styles/Type Selectors
+----------------------------- */
+html {
+    box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    /* line-height: 125%; */
+}
+
+/* main, .projects {
+    background-color: #979797;
+} */
+
+img {
+    width:300px;
+}
+
+h1 {
+    font-size: 50px;
+    /* line-height: 1; */
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h1, h2 {
+    font-family: 'Oswald', cursive;
+    font-weight: 400;
+    /* margin: 15; */
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.item-details h3 + p {
+    font-style: italic;
+}
+
+.item-details h3 ~ p {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* These next two elements select the SECTIONS found within the DIVIDER classes. 
+The first sets the dotted line border and padding.
+The second (with last-of-type) is a pseudo-class and removes the dotted line on that last items of the section.
+*/
+
+.divider  {
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0px;
+}
+
+
+.divider > section:last-of-type {
+    border-bottom: none;
+}
+
+a:link{
+    color: rgb(61, 255, 113);
+}
+
+a:visited {
+    color:rgb(61, 255, 255);
+}
+
+a:focus {
+    font-style: bold;
+}
+
+a:hover {
+    background: #f7fff74b;
+    text-decoration: none;
+}
+
+a:active {
+    color: red;
+}
+
+
+/* Class Selectors 
+
+The Max-width setting means that the items will not scale larger than 800px, 
+but will scale down when the viewport is made smaller.
+
+When the viewport is smaller than the max-width value, it switches to the width value, in this case, 85%.
+----------------------------- */
+.content-wrap {
+    max-width: 90%; 
+    width: 85%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+
+/* Navigation Bar
+----------------------------- */
+
+nav ul {
+    background-image: linear-gradient(
+        45deg, #2f3061, #252764, #252525
+    );
+    list-style-type: none;
+    width: 100vw;
+    /* display: grid;
+    grid-template-columns: repeat(5, 1fr); */
+    display: flex;
+    margin: 0;
+    padding-right: 5%;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.logo {
+    margin: 0;
+    padding-top: 20px;
+    max-width: 50%;
+    min-width: 50px;
+}
+
+
+header nav {
+    position: fixed;
+    z-index: 5;
+}
+
+#scroll {
+    scroll-behavior: smooth;
+}
+
+#name, #projects, #work, #education, #blog-website {
+    scroll-margin-block-start: 110px;
+    /*Adds margin to the top of the viewport*/
+    
+    scroll-margin-block-end: 110px;
+    /*Adds margin to the bottom of the viewport*/ 
+}
+
+
+/* Profile Styles
+----------------------------- */
+header {
+    background: #2f3061;
+    color: #F7FFF7;
+    /* width: 1000px; */
+    /* padding-bottom: 2%; */
+    z-index: -1;
+}
+
+.name {
+    margin-top: 15%;
+    text-align: center;
+}
+.name, .job  {
+    line-height: 115% /* this is preventing the Google font from overlapping itselt when the screen size gets smaller */
+}
+
+.personal-description {
+    text-align: left;
+}
+/* Projects
+----------------------------- */
+/* .projects {
+    background: #F7FFF7;
+} */
+.projects a {
+    color: #2f3061;
+}
+.projects .button {
+    color: #F7FFF7;
+    background: #2f3061;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+.projects a:hover {
+    background: rgba(47,48,97,80%);
+}
+
+.quote figcaption, blockquote {
+    color: #2f3061;
+    text-align: center;
+    font-weight: bold;
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+
+/* Blog Website
+----------------------------- */
+.blog-website {
+    padding-block: 5rem;
+    margin-inline: 8%;
+}
+
+.blog-item h3 {
+    margin-top: 0px;
+    text-align: left;
+}
+
+.blog-website a {
+    color: #2f3061;
+}
+
+.blog-website .button {
+    color: #F7FFF7;
+    background: #2f3061;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.blog-website a:hover {
+    background: rgba(47,48,97,80%);
+}
+
+.blog-item {
+    overflow: hidden;
+}
+
+.blog-item .button {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.blog-item p {
+    text-align: left;
+    padding-top: 10px;
+}
+
+/* Diagonal Effect in Blog Section
+----------------------------- */
+.diagonal {
+    position: relative;
+    min-width: 100%;
+    isolation: isolate;
+}
+
+.diagonal::after {
+    content: '';
+    background-image: linear-gradient(
+        45deg, #6568cc, #4f53d1, #9e9e9e
+    );
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: skewY(-3deg);
+}
+
+/* Work Experience
+----------------------------- */
+.work-experience {
+    background: #A1C6D7;
+    /* margin: 10px; */
+}
+
+/* Education
+----------------------------- */
+.education {
+    background-image: url(../images/joanna-kosinska-unsplash.jpg);
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 100px;
+}
+/* This selects only the Paragraphs <p> within the education class */
+.education p {
+    width: 60%;
+}
+/* This selects the hyperlink in the Education section. Since it has a light background,
+we want to have a darker hyperlink color. */
+.education a {
+    color: #5f61c5;
+}
+
+/* Contact Info/Footer
+----------------------------- */
+footer {
+    background: #343434;
+    color: #F7FFF7;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list a {
+    padding: 10px;
+    display: inline-block;
+}
+
+/* nav-page.html STYLES
+----------------------------- */
+
+.quote {
+    background-color: none;
+}
+
+/* Responsive Styles. Note it's added at the very end (as CSS is read from top to bottom)
+----------------------------- */
+
+/* What this @media section says is: for Media on the screen (and while the width is above 750px),
+take the img in .project-item and float it with the specified margin. 
+
+When the @media is below 750px, the float and margin will NOT be applied. The same 750px limit applies to 
+the .job-item grid as well.
+
+Lastly, the header and footer text will be center aligned after the viewport exceeds 750px, otherwise will be left-aligned by default.
+*/
+@media screen and (min-width: 750px) {
+    header, footer {
+        text-align: center;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+    .blog-item h3 {
+        text-align: right;
+    }
+    .blog-item p {
+        text-align: right;
+    }
+    .blog-item img {
+        float: right;
+        margin-left: 20px
+    }
+    .job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 15px;
+    }
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+    /* .nav-bar-class {
+        flex-direction: row;
+    } */
+    /* .nav-bar {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3px;
+    } */
+}
+
+@media screen and (max-width: 749px) {
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    contact-list a {
+        padding: 5px;
+    }
+    nav ul {
+        font-size: 75%;
+    }
+    .name {
+        margin-top: 35%;
+    }
+}
+
+
+
