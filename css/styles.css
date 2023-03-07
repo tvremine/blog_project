@@ -4,8 +4,9 @@ html {
   color-scheme: dark light;
 }
 
-:root {
-  --twitter: url("https://www.twitter.com/teslabot117/");
+body {
+  display: grid;
+  height: 100%;
 }
 
 .container {
@@ -24,13 +25,6 @@ html {
   
 .header {
   grid-area: hd;
-}
-
-.footer {
-  grid-area: ft;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .sidebar {
@@ -72,13 +66,18 @@ a:hover {
   text-align: left;
   max-width: 5%;
   height: auto;
-  padding: 0%;
 }
+
 
 
 /* About Section
 ----------------------------------- */
-.about {
+.about p {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about h2 {
   padding: 10px;
 }
 
@@ -89,6 +88,17 @@ a:hover {
 }
 li {
   list-style-type: square;
+}
+
+/* Home Section
+----------------------------------- */
+.home {
+  padding: 10px;
+}
+
+.home img {
+  justify-content: center;
+  align-content: center;
 }
 
 /* Blog Section
@@ -120,8 +130,29 @@ li {
   align-items: center;
 }
 
+/* Navigation Bar Section
+----------------------------------- */
+.nav-bar {
+  background: #2f3061;
+  list-style-type: none;
+  display: flex;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0;
+  padding: 0;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: ft;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
   /* If Screen Is Wide Enough */
-  @media(min-width:800px) {
+  @media screen and (min-width:800px) {
     .container {
       display:grid;
       grid-template-columns: 300px 300px 300px;

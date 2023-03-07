@@ -1,5 +1,5 @@
 /* Mobile First Layout */
-.container{
+.container {
     display:grid;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 250px 600px;
@@ -7,22 +7,22 @@
   /* Use grid-template-area to create a mobile layout where each named space occupies its own row */
   
 }
-.box{
+.box {
   border: 1px solid red;
   background: #F8FA9D;
   }
 
-.header{
-    grid-area:hd;
+.header {
+    grid-area: hd;
 }
 
-.footer{
+.footer {
   grid-area: ft;  
 }
-.feature{
+.feature {
   grid-area: feat;
 }
-.content{
+.content {
   grid-area: main;
 }
 
