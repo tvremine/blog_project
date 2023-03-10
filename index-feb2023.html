@@ -9,8 +9,10 @@
     />
     <link rel="stylesheet" href="css/styles-blog.css" />
     <!-- <link rel="shortcut icon" href="#" /> -->
+    <script src="/javascript/lastMonthBlog.js">
+      updateLastMonthLink();
+    </script>
   </head>
-
   <body>
     <div class="container">
       <div class="header box">
@@ -18,6 +20,7 @@
           class="link-twitter"
           href="https://www.twitter.com/teslabot117"
           target="_blank"
+          id="link-twitter"
           ><img src="/images/logo-twitter.png" alt="Twitter" id="logo-twitter"
         /></a>
         Udacity Blog Project
@@ -26,7 +29,9 @@
       <div class="sidebar box">
         <h1>We're all Cyborgs, and it's fantastic</h1>
         <p class="blog-date">February 24, 2023 @ 1:40pm EST, by Tom ReMine</p>
-        <p class="blog-last"><a href="#">Last Month's Post</a></p>
+        <p class="blog-last">
+          <a id="last-month-link" href="#">Last Month's Post</a>
+        </p>
         <section class="blog-body">
           <p>
             Have you ever felt disconnected from your phone? Does the thought of
@@ -36,7 +41,7 @@
             Congratulations, my friend, you're a cyborg! Yes, you read that
             right. As humans, we've reached a point where technology has become
             so ingrained in our daily lives that we've essentially become
-            cyborgs. We may not have robot arms or bionic eyes (yet), but our
+            cyborgs. Though only some of us have robot arms and bionic eyes, our
             smartphones, laptops, and other gadgets have become extensions of
             ourselves.
           </p>
@@ -108,7 +113,7 @@
               src="images/tvr-logo_283x123.png"
               alt="tvr"
               class="logo"
-              style="width: auto; height: 30px; margin-inline: auto"
+              id="logo"
           /></a>
         </section>
       </div>

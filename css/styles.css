@@ -10,19 +10,18 @@ body {
 }
 
 .container {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 250px 600px;
   /* border: 2px solid yellow; */
   /* using grid-template-area to create a mobile layout where each named space occupies its own row */
   grid-template-areas:
-  "hd"
-  "sd"
-  "main"
-  "ft";
+    "hd"
+    "sd"
+    "main"
+    "ft";
 }
 
-  
 .header {
   grid-area: hd;
 }
@@ -43,15 +42,16 @@ a:hover {
   text-decoration: none;
 }
 
-
 /* Header/Title Section
 ----------------------------------- */
 
 .header {
   display: grid;
   background-image: linear-gradient(
-    /* 45deg, #12c2e9, #c471ed, #f64f59 */
-    45deg, #f64f59, #c471ed, #12c2e9
+    /* 45deg, #12c2e9, #c471ed, #f64f59 */ 45deg,
+    #f64f59,
+    #c471ed,
+    #12c2e9
   );
   margin: 0, auto;
   padding: 20px;
@@ -60,15 +60,12 @@ a:hover {
   font-weight: bold;
 }
 
-
 #logo-twitter {
   display: flex;
   text-align: left;
   max-width: 5%;
   height: auto;
 }
-
-
 
 /* About Section
 ----------------------------------- */
@@ -150,24 +147,23 @@ li {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-  /* If Screen Is Wide Enough */
-  @media screen and (min-width:800px) {
-    .container {
-      display:grid;
-      grid-template-columns: 300px 300px 300px;
-      grid-template-rows: 250px 600px;
-      grid-template-areas: 
+/* If Screen Is Wide Enough */
+@media screen and (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 250px 600px;
+    grid-template-areas:
       "hd hd hd hd hd hd hd hd"
       /* "sd sd main main main main main main" 
       ^^^ This was the original line, but it makes the about section too long*/
-      "sd sd sd sd sd sd main main" 
+      "sd sd sd sd sd sd main main"
       /* ^^^ This line makes the Blog Post section bigger, but doesn't shrink correctly when resizing page. */
       "ft ft ft ft ft ft ft ft";
-      /* border: 2px solid red; */
-    }
+    /* border: 2px solid red; */
   }
-  
-  @media(min-width:828px) and (max-width:1080) {
-    display: grid;    
-  }
+}
+
+@media (min-width: 828px) and (max-width: 1080) {
+  display: grid;
+}

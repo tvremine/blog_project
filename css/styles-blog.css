@@ -1,3 +1,4 @@
+@import "css/styles-footer.css";
 /* Set dark mode as a defauly (if applicable in browser) */
 
 html {
@@ -45,6 +46,7 @@ a:hover {
   text-align: center;
   font-size: 2em;
   font-weight: bold;
+  color: rgb(230, 230, 230);
 }
 
 #logo-twitter {
@@ -59,10 +61,12 @@ a:hover {
 .about p {
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(230, 230, 230);
 }
 
 .about h2 {
   padding: 10px;
+  color: rgb(255, 243, 243);
 }
 
 /* Archive Section
@@ -80,9 +84,10 @@ li {
   padding: 10px;
 }
 
-.home img {
-  justify-content: center;
-  align-content: center;
+#logo {
+  width: auto;
+  height: 30px;
+  margin-inline: auto;
 }
 
 /* Blog Section
@@ -109,9 +114,11 @@ li {
 }
 
 .blog-body > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
   height: auto;
-  align-items: center;
   min-width: 300px;
 }
 
@@ -129,11 +136,14 @@ li {
   align-items: center;
 }
 
-.footer {
+/* Footer Section
+  ----------------------------------- */
+
+/* .footer {
   grid-area: ft;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 /* If Screen Is Wide Enough */
 @media screen and (min-width: 800px) {
